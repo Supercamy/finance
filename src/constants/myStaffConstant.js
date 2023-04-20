@@ -52,3 +52,27 @@ export const myStaffGG = processMyStaff(myStaffG)
 };
 
 export const myStaffSum = processYearSum(myStaffG);
+
+function getLastNonZeroActualAndDifference(myStaffG) {
+  let lastNonZeroActual = null;
+  let previousActual = null;
+
+  for (let i = myStaffG.length - 1; i >= 0; i--) {
+    if (myStaffG[i].hasOwnProperty('Actual') && myStaffG[i].Actual !== 0) {
+      lastNonZeroActual = myStaffG[i].Actual;
+      previousActual = i > 0 && myStaffG[i - 1].hasOwnProperty('Actual') ? myStaffG[i - 1].Actual : null;
+      break;
+    }
+  }
+
+  if (lastNonZeroActual === null) {
+    return { lastNonZeroActual: null, difference: null };
+  }
+
+  const difference = previousActual !== null ? lastNonZeroActual - previousActual : null;
+  return { lastNonZeroActual, difference };
+}
+
+const result = getLastNonZeroActualAndDifference(myStaffG);
+console.log("Last non-zero Actual:", result.lastNonZeroActual);
+console.log("Difference:", result.difference);
