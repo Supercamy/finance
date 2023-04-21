@@ -3,7 +3,7 @@ import Card from './Card'
 import Staff from './Staff'
 import StaffTable from './StaffTable'
 import KPICard from './KPICard'
-import {myStaffSum} from '../constants/myStaffConstant'
+import {myStaffSum, lastNonZeroActualAndDifference } from '../constants/myStaffConstant'
 
 const Fte = () => {
 
@@ -16,6 +16,9 @@ const Fte = () => {
       return Math.sign(num) * Math.abs(num);
     }
   }
+
+  console.log("Last non-zero Actual:", lastNonZeroActualAndDifference.lastNonZeroActual);
+console.log("Difference:", lastNonZeroActualAndDifference.difference);
 
   return (
 <div

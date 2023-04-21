@@ -74,5 +74,7 @@ function getLastNonZeroActualAndDifference(myStaffG) {
 }
 
 const result = getLastNonZeroActualAndDifference(myStaffG);
-console.log("Last non-zero Actual:", result.lastNonZeroActual);
-console.log("Difference:", result.difference);
+// console.log("Last non-zero Actual:", result.lastNonZeroActual);
+// console.log("Difference:", result.difference);
+
+export const lastNonZeroActualAndDifference = getLastNonZeroActualAndDifference(myStaffG);
