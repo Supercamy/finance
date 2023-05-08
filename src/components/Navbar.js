@@ -106,7 +106,7 @@ export default function Navbar() {
         <div className='flex items-center justify-between border-b-2 border-slate-100 py-4 md:justify-start md:space-x-10'>
           <div className='flex justify-start lg:w-0 lg:flex-1'>
             <a href='#'>
-              <span className='sr-only'>Finance Dashboard</span>
+              <span className='sr-only'>Project Delivery Dashboard</span>
               <img
                 className='h-8 w-auto sm:h-10'
                 src={MyImage}
@@ -115,7 +115,7 @@ export default function Navbar() {
               />
             </a>
             <h3 className=' justify-start lg:w-0 lg:flex-1 items-center pt-2 ml-3 text-base font-bold text-indigo-800'>
-              Finance Dashboard
+            Project Delivery Dashboard
             </h3>
           </div>
           <div className='-my-2 -mr-2 md:hidden'>
@@ -134,7 +134,7 @@ export default function Navbar() {
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
-                    <span>Section Overview</span>
+                    <span>Project Finance</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',
@@ -242,7 +242,7 @@ export default function Navbar() {
               onClick={() => navigate('/')}
               className='text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer'
             >
-              FTE
+              Operating Account
             </button>
             <button
               onClick={() => navigate('/fte')}
@@ -260,7 +260,7 @@ export default function Navbar() {
                       'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                     )}
                   >
-                    <span>Register</span>
+                    <span>Project Information</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',
